@@ -1,0 +1,18 @@
+main {
+    display: grid;
+    grid-template-rows: min-content min-content min-content min-content;
+    grid-template-columns: min-content min-content min-content min-content min-content min-content;
+    grid-auto-flow: column;
+    gap: .5rem;
+}
+
+.case {
+    width: 75px;
+    height: 75px;
+    border-radius: 100%;
+    background-color: gray;
+
+    &.on {
+        background-color: orange;
+    }
+}
