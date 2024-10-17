@@ -1,3 +1,22 @@
+/* 
+*   Kevin Powell
+*   https://youtu.be/cCAtD_BAHNw 
+*/
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit; /* Get rid of all font sizes and heights */
+}
+
+body {
+    min-height: 100vh;
+}
+
 main {
     display: grid;
     grid-template-rows: min-content min-content min-content min-content;
@@ -13,8 +32,10 @@ main {
     gap: 0.5rem;
 
     .case {
-        width: 75px;
-        height: 75px;
+        max-width: 75px;
+        width: 10vw;
+        min-width: 25px;
+        aspect-ratio: 1/1;
         border-radius: 100%;
         background-color: gray;
     
@@ -26,6 +47,23 @@ main {
 
 .changeMode {
     position: absolute;
-    right: 8px;
-    top: 8px;
+    right: 16px;
+    top: 16px;
+}
+
+@media only screen and (max-width: 600px) {
+    main {
+      gap: 0.25rem;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    main {
+      gap: 0.125rem;
+    }
+
+    .changeMode {
+        right: 8px;
+        top: 30%;
+    }
 }
