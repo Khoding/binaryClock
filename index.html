@@ -9,7 +9,17 @@
 <body>
     <main id="main"></main>
 
+    <button class="changeMode" onclick='changeMode()'>Change mode</button>
+
     <script src="./assets/js/createTheDots.js"></script>
     <script src="./assets/js/theTimePart.js"></script>
+
+    <script type="text/javascript">
+        function changeMode() {
+            removeElements()
+            addElement()
+            changeTheThings()
+        }
+    </script>
 </body>
 </html>

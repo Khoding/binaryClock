@@ -8,7 +8,13 @@ function dec2bin(dec) {
 }
 
 function formatBinary(bin) {
-    for (let index = bin.length; index < 4; index++) {
+    let indexMaxSize = 4
+    if (document.getElementById('main').classList.contains('sixbit')) {
+        indexMaxSize = 6
+        // indexMaxSize = 8
+    }
+
+    for (let index = bin.length; index < indexMaxSize; index++) {
         bin = '0' + bin;
     };
     return bin
@@ -23,7 +29,13 @@ function changeTheThings() {
     let m = addZero(d.getMinutes()).toString().split('');
     let s = addZero(d.getSeconds()).toString().split('');
 
-    arrayOfThings = [
+    if (document.getElementById('main').classList.contains('sixbit')) {
+        h = addZero(d.getHours()).toString();
+        m = addZero(d.getMinutes()).toString();
+        s = addZero(d.getSeconds()).toString();
+    }
+
+    let arrayOfThings = [
         formatBinary(dec2bin(h[0])).split(''),
         formatBinary(dec2bin(h[1])).split(''),
         formatBinary(dec2bin(m[0])).split(''),
@@ -31,6 +43,14 @@ function changeTheThings() {
         formatBinary(dec2bin(s[0])).split(''),
         formatBinary(dec2bin(s[1])).split('')
     ]
+
+    if (document.getElementById('main').classList.contains('sixbit')) {
+        arrayOfThings = [
+            formatBinary(dec2bin(h)).split(''),
+            formatBinary(dec2bin(m)).split(''),
+            formatBinary(dec2bin(s)).split(''),
+        ]
+    }
 
     arrayOfThings.forEach(element => {
         element.forEach(el => {

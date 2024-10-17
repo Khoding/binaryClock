@@ -2,17 +2,30 @@ main {
     display: grid;
     grid-template-rows: min-content min-content min-content min-content;
     grid-template-columns: min-content min-content min-content min-content min-content min-content;
+
+    &.sixbit {
+        /* grid-template-rows: min-content min-content min-content min-content min-content min-content min-content min-content; */
+        grid-template-rows: min-content min-content min-content min-content min-content min-content;
+        grid-template-columns: min-content min-content min-content;
+    }
+
     grid-auto-flow: column;
-    gap: .5rem;
+    gap: 0.5rem;
+
+    .case {
+        width: 75px;
+        height: 75px;
+        border-radius: 100%;
+        background-color: gray;
+    
+        &.on {
+            background-color: orange;
+        }
+    }
 }
 
-.case {
-    width: 75px;
-    height: 75px;
-    border-radius: 100%;
-    background-color: gray;
-
-    &.on {
-        background-color: orange;
-    }
+.changeMode {
+    position: absolute;
+    right: 8px;
+    top: 8px;
 }
