@@ -1,9 +1,11 @@
-/* 
+/*
 *   Kevin Powell
-*   https://youtu.be/cCAtD_BAHNw 
+*   https://youtu.be/cCAtD_BAHNw
 */
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
@@ -15,12 +17,20 @@
 
 body {
     min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
 }
 
 main {
     display: grid;
     grid-template-rows: min-content min-content min-content min-content;
     grid-template-columns: min-content min-content min-content min-content min-content min-content;
+    /* I need to remember this: if the width is set,
+        the margin-x is auto and the padding is whatever,
+        the margin on both sides will stay the same and
+        won't be eaten by the right side of the page */
+    width: fit-content;
+    margin-inline: auto;
+    padding-inline: 8px;
 
     &.sixbit {
         /* grid-template-rows: min-content min-content min-content min-content min-content min-content min-content min-content; */
@@ -34,36 +44,30 @@ main {
     .case {
         max-width: 75px;
         width: 10vw;
-        min-width: 25px;
+        min-width: 50px;
         aspect-ratio: 1/1;
         border-radius: 100%;
         background-color: gray;
-    
+
         &.on {
             background-color: orange;
         }
     }
 }
 
-.changeMode {
-    position: absolute;
-    right: 16px;
-    top: 16px;
-}
-
-@media only screen and (max-width: 600px) {
-    main {
-      gap: 0.25rem;
-    }
-}
-
-@media only screen and (max-width: 400px) {
-    main {
-      gap: 0.125rem;
-    }
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem;
 
     .changeMode {
-        right: 8px;
-        top: 30%;
+        width: 150px;
+        aspect-ratio: 3/1;
+        border-radius: 24px;
+        background-color: wheat;
+        color: rgb(235, 84, 84);
+        border-color: burlywood;
     }
 }
