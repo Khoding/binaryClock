@@ -45,10 +45,6 @@ main {
     margin-top: 1rem;
     grid-template-rows: min-content min-content min-content min-content;
     grid-template-columns: min-content min-content min-content min-content min-content min-content;
-    /* I need to remember this: if the width is set,
-        the margin-x is auto and the padding is whatever,
-        the margin on both sides will stay the same and
-        won't be eaten by the right side of the page */
     width: fit-content;
     margin-inline: auto;
     padding-inline: 1rem;
@@ -68,9 +64,9 @@ main {
 
     .case {
         position: relative;
-        max-width: 75px;
+        max-width: 4rem;
         width: 10vw;
-        min-width: 50px;
+        min-width: 3rem;
         aspect-ratio: 1/1;
         border-radius: 100%;
         background-color: #16697a;
@@ -101,13 +97,14 @@ footer {
     padding: 1rem;
 
     .buttonGen {
-        width: 150px;
+        width: 10rem;
         aspect-ratio: 3/1;
-        border-radius: 24px;
+        border-radius: 1.5rem;
         background-color: #16697a;
         color: #ede7e3;
         border-color: #489fb5;
         box-shadow: var(--shadow-elevation-low);
+        margin-block: 0.25rem;
 
         &:hover {
             color: white;
