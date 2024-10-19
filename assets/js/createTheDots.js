@@ -13,11 +13,20 @@ function addElement() {
     let text = [8, 4, 2, 1];
     let textModulo = 4;
 
+    // 6 bit or 4 bit mode
     let currentMode = localStorage.getItem('mode') || '6 bit';
     if (currentMode === '6 bit') {
         document.getElementById('main').classList.add('sixbit');
     } else {
         document.getElementById('main').classList.remove('sixbit');
+    }
+
+    // Show numbers toggle
+    let showNumbers = localStorage.getItem('showNumbers') || 'false';
+    if (showNumbers === 'false') {
+        document.getElementById('main').classList.add('hideSpan');
+    } else {
+        document.getElementById('main').classList.remove('hideSpan');
     }
 
     if (document.getElementById('main').classList.contains('sixbit')) {

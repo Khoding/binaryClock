@@ -41,6 +41,10 @@
         }
 
         function showNumbers() {
+            // Toggle showNumbers and store in localStorage
+            let currentMode = localStorage.getItem('showNumbers') || 'false';
+            currentMode = currentMode === 'false' ? 'true' : 'false';
+            localStorage.setItem('showNumbers', currentMode);
             document.getElementById('main').classList.toggle('hideSpan')
         }
     </script>
