@@ -30,6 +30,11 @@
 
     <script type="text/javascript">
         function buttonGen() {
+            // Toggle mode and store in localStorage
+            let currentMode = localStorage.getItem('mode') || '6 bit';
+            currentMode = currentMode === '6 bit' ? '4 bit' : '6 bit';
+            localStorage.setItem('mode', currentMode);
+
             removeElements()
             addElement()
             changeTheThings()

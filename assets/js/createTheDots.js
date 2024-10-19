@@ -13,6 +13,13 @@ function addElement() {
     let text = [8, 4, 2, 1];
     let textModulo = 4;
 
+    let currentMode = localStorage.getItem('mode') || '6 bit';
+    if (currentMode === '6 bit') {
+        document.getElementById('main').classList.add('sixbit');
+    } else {
+        document.getElementById('main').classList.remove('sixbit');
+    }
+
     if (document.getElementById('main').classList.contains('sixbit')) {
         text = [32, 16, 8, 4, 2, 1];
         // text = [128, 64 ,32, 16, 8, 4, 2, 1]
