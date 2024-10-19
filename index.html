@@ -14,18 +14,25 @@
 </head>
 
 <body>
-    <main id="main"></main>
+    <main id="main" class="hideSpan"></main>
 
-    <footer><button class="changeMode" onclick='changeMode()'>Change mode</button></footer>
+    <footer>
+        <button class="buttonGen" onclick='buttonGen()'>Change mode</button>
+        <button class="buttonGen" onclick='showNumbers()'>Show numbers</button>
+    </footer>
 
     <script src="./assets/js/createTheDots.js"></script>
     <script src="./assets/js/theTimePart.js"></script>
 
     <script type="text/javascript">
-        function changeMode() {
+        function buttonGen() {
             removeElements()
             addElement()
             changeTheThings()
+        }
+
+        function showNumbers() {
+            document.getElementById('main').classList.toggle('hideSpan')
         }
     </script>
 </body>
