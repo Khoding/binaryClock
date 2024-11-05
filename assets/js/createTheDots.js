@@ -31,11 +31,8 @@ function addElement() {
 
     if (document.getElementById('main').classList.contains('sixbit')) {
         text = [32, 16, 8, 4, 2, 1];
-        // text = [128, 64 ,32, 16, 8, 4, 2, 1]
         textModulo = 6;
-        // textModulo = 8
         nbElements = 18;
-        // nbElements = 24;
     }
 
     for (let i = 0; i < nbElements; i++) {
