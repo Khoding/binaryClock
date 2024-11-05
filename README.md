@@ -1,3 +1,3 @@
 # Binary Clock, inspired by Manjaro
 
-TODO:
+This thing is very basic, code most likely not up to standards.
