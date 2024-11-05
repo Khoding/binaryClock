@@ -13,7 +13,6 @@ function formatBinary(bin) {
     let indexMaxSize = 4;
     if (document.getElementById('main').classList.contains('sixbit')) {
         indexMaxSize = 6;
-        // indexMaxSize = 8
     }
 
     for (let index = bin.length; index < indexMaxSize; index++) {
