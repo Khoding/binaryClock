@@ -18,14 +18,21 @@
     1px 2px 2.5px -2.5px hsl(var(--shadow-color) / 0.34);
 }
 
+html {
+  height: calc(100dvh - 0.5rem);
+}
+
 body {
-  height: calc(100vh - 2rem);
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: 'Roboto', sans-serif;
   background-color: #ede7e3;
 }
 
 main {
   display: grid;
+  flex: 1;
   margin-top: 1rem;
   grid-template-rows: min-content min-content min-content min-content;
   grid-template-columns: min-content min-content min-content min-content min-content min-content;
@@ -73,8 +80,7 @@ main {
 }
 
 footer {
-  position: fixed;
-  bottom: 0;
+  margin-bottom: 0;
   width: 100%;
   text-align: center;
   padding: 1rem;
